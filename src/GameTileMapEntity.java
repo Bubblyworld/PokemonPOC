@@ -1,5 +1,3 @@
-import com.sun.corba.se.impl.orbutil.closure.Constant;
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 import org.newdawn.slick.Image;
 
 import java.util.PriorityQueue;
@@ -19,7 +17,7 @@ public class GameTileMapEntity extends GameEntity {
         this.yCopies = yCopies;
     }
 
-    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue) {
+    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue, GameCollisionMap collisionMap) {
     }
 
     public void render(float cameraX, float cameraY) {

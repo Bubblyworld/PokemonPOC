@@ -5,7 +5,7 @@ public class Constants {
     //Blocks represent what visibly appears to be a tile, but the pokemon engine
     //renders it individually internally.
     public static final float SEC_PER_TICK = 0.20f;
-    public static final float NPC_PIX_PER_TICK = 8.0f;
+    public static final float NPC_PIX_PER_TICK = 16.0f;
     public static final float BLOCK_SIZE = 16.0f;
 
     //The amount of time between a new tick and current tick before player

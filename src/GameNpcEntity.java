@@ -1,4 +1,3 @@
-import org.newdawn.slick.Image;
 import org.newdawn.slick.SpriteSheet;
 
 import java.util.PriorityQueue;
@@ -38,7 +37,7 @@ public class GameNpcEntity extends GameEntity {
     }
 
     @Override
-    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue) {
+    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue, GameCollisionMap collisionMap) {
         //For the moment, we do absolutely nothing ^_^.
         long movementTick = getMovementTick(currentTickF);
         if (!busyWithAction) {
@@ -56,6 +55,13 @@ public class GameNpcEntity extends GameEntity {
                 .getSprite(spriteX, spriteY)
                 .getFlippedCopy(flipSpriteHorizontally, false)
                 .draw(renderX, renderY - 16.0f);
+    }
+
+    /**
+     * Can we move in the given direction without hitting a collision entity?
+     */
+    public boolean canMoveInDirection(int dx, int dy, GameCollisionMap collisionMap) {
+        return !collisionMap.isCollision(x + dx*Constants.BLOCK_SIZE, y + dy*Constants.BLOCK_SIZE);
     }
 
     public long getMovementTick(float currentTickF) {

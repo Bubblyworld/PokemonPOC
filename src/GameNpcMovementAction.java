@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created by guy on 8/1/15.
  * Controls the movement of a given NPC from one tile to an adjacent one.
@@ -24,7 +26,7 @@ public class GameNpcMovementAction extends GameAction {
     }
 
     @Override
-    public void update(float currentTickF) {
+    public void update(float currentTickF, List<GameEntity> entityList) {
         float deltaTickF = currentTickF - lastUpdateTickF;
 
         //We move the entity first.

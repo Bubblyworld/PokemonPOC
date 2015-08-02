@@ -22,18 +22,21 @@ public class GamePlayerEntity extends GameNpcEntity {
      * If we aren't busy with something already, allow arrows to control the players'
      * movement.
      */
-    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue) {
+    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue, GameCollisionMap collisionMap) {
         long movementTick = getMovementTick(currentTickF);
 
         if (!busyWithAction) {
-            if (playerInput.isKeyDown(Input.KEY_UP))
-                actionQueue.add(new GameNpcMovementAction(movementTick, this, 0, -1));
-            else if (playerInput.isKeyDown(Input.KEY_DOWN))
-                actionQueue.add(new GameNpcMovementAction(movementTick, this, 0, +1));
-            else if (playerInput.isKeyDown(Input.KEY_LEFT))
-                actionQueue.add(new GameNpcMovementAction(movementTick, this, -1, 0));
-            else if (playerInput.isKeyDown(Input.KEY_RIGHT))
-                actionQueue.add(new GameNpcMovementAction(movementTick, this, +1, 0));
+            int dx = 0, dy = 0;
+
+            if (playerInput.isKeyDown(Input.KEY_UP))         dy = -1;
+            else if (playerInput.isKeyDown(Input.KEY_DOWN))  dy = +1;
+            else if (playerInput.isKeyDown(Input.KEY_LEFT))  dx = -1;
+            else if (playerInput.isKeyDown(Input.KEY_RIGHT)) dx = +1;
+
+            if (dx != 0 || dy != 0) {
+                if (this.canMoveInDirection(dx, dy, collisionMap))
+                    actionQueue.add(new GameNpcMovementAction(movementTick, this, dx, dy));
+            }
         }
     }
 }

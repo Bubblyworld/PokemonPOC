@@ -1,3 +1,4 @@
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -22,10 +23,14 @@ public class GameWalkingState extends BasicGameState {
     public List<GameEntity> entities;
     public GameEntity camera;
 
+    //Collision map data.
+    public GameCollisionMap collisionMap;
+
     public void init(GameContainer container, StateBasedGame game) {
         currentTick = 0;
         actionQueue = new PriorityQueue<>();
         entities = new ArrayList<>();
+        collisionMap = new GameCollisionMap();
 
         try {
             PalletTown.init(this, container);
@@ -37,6 +42,19 @@ public class GameWalkingState extends BasicGameState {
     public void render(GameContainer container, StateBasedGame game, Graphics graphics) {
         for (GameEntity entity : entities) {
             entity.render(camera.x - Constants.SCREEN_WIDTH / 2, camera.y - Constants.SCREEN_HEIGHT / 2);
+        }
+
+        /**
+         * DEBUG - render the collision boxes
+         */
+        graphics.setColor(Color.red);
+        for (GameCollisionMap.CollisionBox box : collisionMap.entities) {
+            graphics.drawRect(
+                    box.x1 - camera.x + Constants.SCREEN_WIDTH/2,
+                    box.y1 - camera.y + Constants.SCREEN_HEIGHT/2,
+                    box.x2 - box.x1,
+                    box.y2 - box.y1
+            );
         }
     }
 
@@ -53,7 +71,7 @@ public class GameWalkingState extends BasicGameState {
         while(!actionQueue.isEmpty() && actionQueue.peek().activationTick <= currentTick) {
             GameAction action = actionQueue.poll();
 
-            action.update(currentTickF);
+            action.update(currentTickF, entities);
             if (!action.isComplete)
                 unfinishedActions.add(action);
         }
@@ -63,7 +81,7 @@ public class GameWalkingState extends BasicGameState {
 
         //Update entities.
         for (GameEntity entity : entities) {
-            entity.update(currentTickF, deltaTicks, actionQueue);
+            entity.update(currentTickF, deltaTicks, actionQueue, collisionMap);
         }
     }
 

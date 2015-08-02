@@ -16,7 +16,7 @@ public class GameStaticEntity extends GameEntity {
     }
 
     @Override
-    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue) {
+    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue, GameCollisionMap collisionMap) {
     }
 
     @Override
