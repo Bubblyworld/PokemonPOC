@@ -2,19 +2,24 @@ import org.newdawn.slick.Image;
 
 import java.util.PriorityQueue;
 
-//A tilemap entity of a given height and size.
-public class GameMapEntity extends GameEntity {
-    //TODO: actually make it a tilemap
+/**
+ * Created by guy on 8/2/15.
+ * Models a static image entity.
+ */
+public class GameStaticEntity extends GameEntity {
     Image image;
 
-    public GameMapEntity(float x, float y, Image image) {
+    public GameStaticEntity(float x, float y, Image image) {
         super(x, y);
+
         this.image = image;
     }
 
+    @Override
     public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue) {
     }
 
+    @Override
     public void render(float cameraX, float cameraY) {
         float renderX = x - cameraX;
         float renderY = y - cameraY;

@@ -1,3 +1,4 @@
+import org.newdawn.slick.Image;
 import org.newdawn.slick.SpriteSheet;
 
 import java.util.PriorityQueue;
@@ -53,7 +54,8 @@ public class GameNpcEntity extends GameEntity {
         //TODO we subtract 16 as the sprite is 16x32
         spriteSheet
                 .getSprite(spriteX, spriteY)
-                .draw(renderX, renderY - 16);
+                .getFlippedCopy(flipSpriteHorizontally, false)
+                .draw(renderX, renderY - 16.0f);
     }
 
     public long getMovementTick(float currentTickF) {

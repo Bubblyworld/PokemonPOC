@@ -4,7 +4,7 @@ public class Constants {
     //We make a distinction between tiles(16x16) and blocks(32x32).
     //Blocks represent what visibly appears to be a tile, but the pokemon engine
     //renders it individually internally.
-    public static final float SEC_PER_TICK = 0.25f;
+    public static final float SEC_PER_TICK = 0.20f;
     public static final float NPC_PIX_PER_TICK = 8.0f;
     public static final float BLOCK_SIZE = 16.0f;
 
@@ -14,7 +14,4 @@ public class Constants {
 
     public static final int SCREEN_WIDTH = 600;
     public static final int SCREEN_HEIGHT = 400;
-
-    public static final float EPSILON = 0.0001f;
-    public static final float INFINITY = 999999999999.0f;
 }
