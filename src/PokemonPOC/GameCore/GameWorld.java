@@ -1,19 +1,21 @@
-import org.newdawn.slick.Color;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.state.BasicGameState;
+package PokemonPOC.GameCore;
+
+import PokemonPOC.Constants;
+import PokemonPOC.GameActions.GameAction;
+import PokemonPOC.GameEntities.GameEntity;
+import PokemonPOC.GameMapInits.GameMapInit;
+import org.newdawn.slick.*;
 import org.newdawn.slick.state.StateBasedGame;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
-/*
-Models the state where the player is walking around in the various
-in-game areas.
-*/
-public class GameWalkingState extends BasicGameState {
+/**
+ * Created by guy on 8/2/15.
+ * Contains and updates all data relevant to the game world - tilemaps, npcs, player etc.
+ */
+public class GameWorld {
     //State of game time variables, and action priority queue.
     public PriorityQueue<GameAction> actionQueue;
     public long currentTick;
@@ -26,20 +28,25 @@ public class GameWalkingState extends BasicGameState {
     //Collision map data.
     public GameCollisionMap collisionMap;
 
-    public void init(GameContainer container, StateBasedGame game) {
+    //Player input.
+    public Input playerInput;
+
+    public GameWorld(GameContainer container) {
         currentTick = 0;
         actionQueue = new PriorityQueue<>();
         entities = new ArrayList<>();
         collisionMap = new GameCollisionMap();
-
-        try {
-            PalletTown.init(this, container);
-        } catch(SlickException e) {
-            System.err.println("Error initialising the GameWalkingState.");
-        }
+        playerInput = container.getInput();
     }
 
     public void render(GameContainer container, StateBasedGame game, Graphics graphics) {
+        //We sort the entities by depth, then we render them.
+        entities.sort((entity1, entity2) -> {
+            if (entity1.depth < entity2.depth) return -1;
+            if (entity1.depth > entity2.depth) return +1;
+            return 0;
+        });
+
         for (GameEntity entity : entities) {
             entity.render(camera.x - Constants.SCREEN_WIDTH / 2, camera.y - Constants.SCREEN_HEIGHT / 2);
         }
@@ -71,7 +78,7 @@ public class GameWalkingState extends BasicGameState {
         while(!actionQueue.isEmpty() && actionQueue.peek().activationTick <= currentTick) {
             GameAction action = actionQueue.poll();
 
-            action.update(currentTickF, entities);
+            action.update(currentTickF, this);
             if (!action.isComplete)
                 unfinishedActions.add(action);
         }
@@ -79,19 +86,21 @@ public class GameWalkingState extends BasicGameState {
         //Unfinished actions we push back onto the action queue.
         actionQueue.addAll(unfinishedActions);
 
-        //Update entities.
-        for (GameEntity entity : entities) {
-            entity.update(currentTickF, deltaTicks, actionQueue, collisionMap);
+        //Update entities, and clear out dead ones.
+        for (GameEntity entity : entities)
+            entity.update(currentTickF, deltaTicks, this);
+
+        entities.removeIf((entity) -> entity.isDead);
+    }
+
+    public void enterMaps(List<GameMapInit> mapInits) {
+        try {
+            for (GameMapInit init : mapInits) init.initMap(this);
+            for (GameMapInit init : mapInits) init.initNpcs(this);
+            for (GameMapInit init : mapInits) init.initTopSprites(this);
+            for (GameMapInit init : mapInits) init.initCollision(this);
+        } catch(SlickException e) {
+            System.err.println("Error loading map inits.");
         }
-    }
-
-    public void enter(GameContainer container, StateBasedGame game) {
-    }
-
-    public void leave(GameContainer container, StateBasedGame game) {
-    }
-
-    public int getID() {
-        return Constants.GAME_WALKING_STATE_ID;
     }
 }

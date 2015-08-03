@@ -1,3 +1,5 @@
+package PokemonPOC;
+
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.state.StateBasedGame;
 

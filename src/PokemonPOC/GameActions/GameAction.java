@@ -1,4 +1,6 @@
-import java.util.List;
+package PokemonPOC.GameActions;
+
+import PokemonPOC.GameCore.GameWorld;
 
 /**
  * Models an action that happens at a particular game tick.
@@ -17,7 +19,7 @@ public abstract class GameAction implements Comparable<GameAction> {
         this.isComplete = false;
     }
 
-    public abstract void update(float currentTickF, List<GameEntity> entityList);
+    public abstract void update(float currentTickF, GameWorld world);
 
     public void setComplete() {
         isComplete = true;

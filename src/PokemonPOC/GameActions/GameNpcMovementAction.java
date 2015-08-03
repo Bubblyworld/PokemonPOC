@@ -1,4 +1,8 @@
-import java.util.List;
+package PokemonPOC.GameActions;
+
+import PokemonPOC.Constants;
+import PokemonPOC.GameEntities.GameNpcEntity;
+import PokemonPOC.GameCore.GameWorld;
 
 /**
  * Created by guy on 8/1/15.
@@ -26,7 +30,7 @@ public class GameNpcMovementAction extends GameAction {
     }
 
     @Override
-    public void update(float currentTickF, List<GameEntity> entityList) {
+    public void update(float currentTickF, GameWorld world) {
         float deltaTickF = currentTickF - lastUpdateTickF;
 
         //We move the entity first.

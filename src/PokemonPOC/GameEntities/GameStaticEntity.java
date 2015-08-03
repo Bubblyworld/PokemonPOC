@@ -1,6 +1,7 @@
-import org.newdawn.slick.Image;
+package PokemonPOC.GameEntities;
 
-import java.util.PriorityQueue;
+import PokemonPOC.GameCore.GameWorld;
+import org.newdawn.slick.Image;
 
 /**
  * Created by guy on 8/2/15.
@@ -9,14 +10,14 @@ import java.util.PriorityQueue;
 public class GameStaticEntity extends GameEntity {
     Image image;
 
-    public GameStaticEntity(float x, float y, Image image) {
-        super(x, y);
+    public GameStaticEntity(float x, float y, float depth, Image image) {
+        super(x, y, depth);
 
         this.image = image;
     }
 
     @Override
-    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue, GameCollisionMap collisionMap) {
+    public void update(float currentTickF, float tickDelta, GameWorld world) {
     }
 
     @Override

@@ -1,6 +1,10 @@
-import org.newdawn.slick.SpriteSheet;
+package PokemonPOC.GameEntities;
 
-import java.util.PriorityQueue;
+import PokemonPOC.Constants;
+import PokemonPOC.GameActions.GameNpcMovementAction;
+import PokemonPOC.GameCore.GameCollisionMap;
+import PokemonPOC.GameCore.GameWorld;
+import org.newdawn.slick.SpriteSheet;
 
 /**
  * Created by Guy Paterson-Jones on 8/1/15.
@@ -25,8 +29,8 @@ public class GameNpcEntity extends GameEntity {
     public static final int FACE_LEFT  = 2;
     public static final int FACE_RIGHT = 3;
 
-    public GameNpcEntity(float x, float y, SpriteSheet spriteSheet) {
-        super(x, y);
+    public GameNpcEntity(float x, float y, float depth, SpriteSheet spriteSheet) {
+        super(x, y, depth);
 
         this.spriteSheet = spriteSheet;
         spriteX = 0;
@@ -37,11 +41,11 @@ public class GameNpcEntity extends GameEntity {
     }
 
     @Override
-    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue, GameCollisionMap collisionMap) {
+    public void update(float currentTickF, float tickDelta, GameWorld world) {
         //For the moment, we do absolutely nothing ^_^.
         long movementTick = getMovementTick(currentTickF);
         if (!busyWithAction) {
-            actionQueue.add(new GameNpcMovementAction(movementTick, this, -1, 0));
+            world.actionQueue.add(new GameNpcMovementAction(movementTick, this, -1, 0));
         }
     }
 
@@ -61,7 +65,7 @@ public class GameNpcEntity extends GameEntity {
      * Can we move in the given direction without hitting a collision entity?
      */
     public boolean canMoveInDirection(int dx, int dy, GameCollisionMap collisionMap) {
-        return !collisionMap.isCollision(x + dx*Constants.BLOCK_SIZE, y + dy*Constants.BLOCK_SIZE);
+        return !collisionMap.isCollision(x + dx* Constants.BLOCK_SIZE, y + dy*Constants.BLOCK_SIZE);
     }
 
     public long getMovementTick(float currentTickF) {

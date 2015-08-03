@@ -1,6 +1,8 @@
-import org.newdawn.slick.Image;
+package PokemonPOC.GameEntities;
 
-import java.util.PriorityQueue;
+import PokemonPOC.Constants;
+import PokemonPOC.GameCore.GameWorld;
+import org.newdawn.slick.Image;
 
 //A tilemap entity of a given height and size.
 public class GameTileMapEntity extends GameEntity {
@@ -9,15 +11,15 @@ public class GameTileMapEntity extends GameEntity {
     Image image;
     int xCopies, yCopies;
 
-    public GameTileMapEntity(float x, float y, Image image, int xCopies, int yCopies) {
-        super(x, y);
+    public GameTileMapEntity(float x, float y, float depth, Image image, int xCopies, int yCopies) {
+        super(x, y, depth);
 
         this.image = image;
         this.xCopies = xCopies;
         this.yCopies = yCopies;
     }
 
-    public void update(float currentTickF, float tickDelta, PriorityQueue<GameAction> actionQueue, GameCollisionMap collisionMap) {
+    public void update(float currentTickF, float tickDelta, GameWorld world) {
     }
 
     public void render(float cameraX, float cameraY) {
