@@ -19,7 +19,8 @@ public class GameTileMapEntity extends GameEntity {
         this.yCopies = yCopies;
     }
 
-    public void update(float currentTickF, float tickDelta, GameWorld world) {
+    public boolean update(float currentTickF, float tickDelta, GameWorld world) {
+        return true;
     }
 
     public void render(float cameraX, float cameraY) {

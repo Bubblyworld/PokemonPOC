@@ -1,13 +1,12 @@
 package PokemonPOC.GameMapInits;
 
-import PokemonPOC.GameEntities.GameAnimatedEntity;
-import PokemonPOC.GameEntities.GamePlayerEntity;
-import PokemonPOC.GameEntities.GameStaticEntity;
-import PokemonPOC.GameEntities.GameTileMapEntity;
+import PokemonPOC.GameEntities.*;
 import PokemonPOC.GameCore.GameWorld;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
+
+import java.util.ArrayList;
 
 /**
  * Created by guy on 8/1/15.
@@ -16,7 +15,10 @@ import org.newdawn.slick.SpriteSheet;
 public class GamePalletTownInit extends GameMapInit {
     public void initCollision(GameWorld world) {
         //Add collision information.
-        world.collisionMap.addCollisionBox(80, 64, 160, 128); //left red house
+        world.collisionMap.addCollisionBox(80, 64, 160, 112); //left red house
+        world.collisionMap.addCollisionBox(80, 112, 96, 128); //  left of door
+        world.collisionMap.addCollisionBox(112, 112, 160, 128); //  right of door
+
         world.collisionMap.addCollisionBox(224, 64, 304, 128); //right red house
         world.collisionMap.addCollisionBox(208, 160, 320, 224); //bottom right house
         world.collisionMap.addCollisionBox(80, 176, 160, 192); //left fence
@@ -50,6 +52,11 @@ public class GamePalletTownInit extends GameMapInit {
                 world.entities.add(new GameAnimatedEntity(96 + x*16, 192 + y*16, 0, flowerSheet, 1.0f));
             }
         }
+
+        //Trigger to get into the hero's house.
+        ArrayList<GameMapInit> heroHouse = new ArrayList<>();
+        heroHouse.add(new GamePalletHeroHouse1FInit());
+        world.entities.add(new GameMapTriggerEntity(96, 112, 0, heroHouse));
     }
 
     public void initNpcs(GameWorld world) throws SlickException {

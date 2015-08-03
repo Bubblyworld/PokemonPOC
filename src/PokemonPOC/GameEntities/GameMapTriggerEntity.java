@@ -19,11 +19,14 @@ public class GameMapTriggerEntity extends GameTriggerEntity {
     }
 
     @Override
-    public void playerStepsOn(GameWorld world, GamePlayerEntity player) {
+    public boolean playerStepsOn(GameWorld world, GamePlayerEntity player) {
         world.enterMaps(mapInits);
+
+        return false;
     }
 
     @Override
-    public void playerStepsOff(GameWorld world, GamePlayerEntity player) {
+    public boolean playerStepsOff(GameWorld world, GamePlayerEntity player) {
+        return true;
     }
 }

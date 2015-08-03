@@ -34,12 +34,14 @@ public class GameAnimatedEntity extends GameEntity {
     }
 
     @Override
-    public void update(float currentTickF, float tickDelta, GameWorld world) {
+    public boolean update(float currentTickF, float tickDelta, GameWorld world) {
         //Update the current life length;
         currentLife += tickDelta;
 
         if (currentLife > lifespan)
             this.isDead = true;
+
+        return true;
     }
 
     @Override

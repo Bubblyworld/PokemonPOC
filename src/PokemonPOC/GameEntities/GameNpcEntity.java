@@ -41,12 +41,14 @@ public class GameNpcEntity extends GameEntity {
     }
 
     @Override
-    public void update(float currentTickF, float tickDelta, GameWorld world) {
+    public boolean update(float currentTickF, float tickDelta, GameWorld world) {
         //For the moment, we do absolutely nothing ^_^.
         long movementTick = getMovementTick(currentTickF);
         if (!busyWithAction) {
             world.actionQueue.add(new GameNpcMovementAction(movementTick, this, -1, 0));
         }
+
+        return true;
     }
 
     @Override

@@ -17,7 +17,8 @@ public class GameStaticEntity extends GameEntity {
     }
 
     @Override
-    public void update(float currentTickF, float tickDelta, GameWorld world) {
+    public boolean update(float currentTickF, float tickDelta, GameWorld world) {
+        return true;
     }
 
     @Override

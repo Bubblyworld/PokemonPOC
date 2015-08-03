@@ -24,7 +24,7 @@ public class GamePlayerEntity extends GameNpcEntity {
      * If we aren't busy with something already, allow arrows to control the players'
      * movement.
      */
-    public void update(float currentTickF, float tickDelta, GameWorld world) {
+    public boolean update(float currentTickF, float tickDelta, GameWorld world) {
         long movementTick = getMovementTick(currentTickF);
 
         if (!busyWithAction) {
@@ -40,5 +40,7 @@ public class GamePlayerEntity extends GameNpcEntity {
                     world.actionQueue.add(new GameNpcMovementAction(movementTick, this, dx, dy));
             }
         }
+
+        return true;
     }
 }

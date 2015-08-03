@@ -87,13 +87,20 @@ public class GameWorld {
         actionQueue.addAll(unfinishedActions);
 
         //Update entities, and clear out dead ones.
-        for (GameEntity entity : entities)
-            entity.update(currentTickF, deltaTicks, this);
+        for (GameEntity entity : entities) {
+            if (!entity.update(currentTickF, deltaTicks, this))
+                break;
+        }
 
         entities.removeIf((entity) -> entity.isDead);
     }
 
     public void enterMaps(List<GameMapInit> mapInits) {
+        entities.clear();
+        actionQueue.clear();
+        collisionMap.clear();
+        camera = null;
+
         try {
             for (GameMapInit init : mapInits) init.initMap(this);
             for (GameMapInit init : mapInits) init.initNpcs(this);
