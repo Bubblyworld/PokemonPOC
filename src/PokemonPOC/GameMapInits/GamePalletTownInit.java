@@ -13,6 +13,10 @@ import java.util.ArrayList;
  * Initialises the pallet town map for the proof of concept.
  */
 public class GamePalletTownInit extends GameMapInit {
+    public GamePalletTownInit(float playerX, float playerY) {
+        super(playerX, playerY);
+    }
+
     public void initCollision(GameWorld world) {
         //Add collision information.
         world.collisionMap.addCollisionBox(80, 64, 160, 112); //left red house
@@ -55,16 +59,24 @@ public class GamePalletTownInit extends GameMapInit {
 
         //Trigger to get into the hero's house.
         ArrayList<GameMapInit> heroHouse = new ArrayList<>();
-        heroHouse.add(new GamePalletHeroHouse1FInit());
+        heroHouse.add(new GamePalletHeroHouse1FInit(48, 128));
         world.entities.add(new GameMapTriggerEntity(96, 112, 0, heroHouse));
     }
 
     public void initNpcs(GameWorld world) throws SlickException {
-        SpriteSheet playerSheet = new SpriteSheet("assets/player.png", 16, 32);
+        SpriteSheet hikerSheet = new SpriteSheet("assets/hiker.png", 16, 32);
 
-        GamePlayerEntity player = new GamePlayerEntity(112, 16, 1, playerSheet, world.playerInput);
-        world.entities.add(player);
-        world.camera = player;
+        //Add a hiker npc in the bottom right corner.
+        world.entities.add(new GameNpcEntity(320, 288, 1, hikerSheet, world));
+
+        //Initialise player if we need to.
+        if (this.isPlayerInitialised) {
+            SpriteSheet playerSheet = new SpriteSheet("assets/player.png", 16, 32);
+
+            GamePlayerEntity player = new GamePlayerEntity(this.playerX, this.playerY, 1, playerSheet, world);
+            world.entities.add(player);
+            world.camera = player;
+        }
     }
 
     //TODO: this is a pass at creating a spritesheet on top so the player can walk behind things.

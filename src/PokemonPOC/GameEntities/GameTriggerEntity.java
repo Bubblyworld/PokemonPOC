@@ -27,7 +27,6 @@ public abstract class GameTriggerEntity extends GameEntity {
                         if (!playerStepsOn(world, (GamePlayerEntity) entity)) {
                             return false;
                         }
-                        //TODO conditions on ending, for multiplayer
                     }
                 } else {
                     if (isSteppedOn) {

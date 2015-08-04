@@ -55,7 +55,7 @@ public class GameWorld {
          * DEBUG - render the collision boxes
          */
         graphics.setColor(Color.red);
-        for (GameCollisionMap.CollisionBox box : collisionMap.entities) {
+        for (GameCollisionBox box : collisionMap.entities) {
             graphics.drawRect(
                     box.x1 - camera.x + Constants.SCREEN_WIDTH/2,
                     box.y1 - camera.y + Constants.SCREEN_HEIGHT/2,
@@ -96,6 +96,13 @@ public class GameWorld {
     }
 
     public void enterMaps(List<GameMapInit> mapInits) {
+        enterMaps(mapInits, 0, 0);
+    }
+
+    /**
+     * Parameters for optional placement of this instance's player sprite.
+     */
+    public void enterMaps(List<GameMapInit> mapInits, float cameraX, float cameraY) {
         entities.clear();
         actionQueue.clear();
         collisionMap.clear();

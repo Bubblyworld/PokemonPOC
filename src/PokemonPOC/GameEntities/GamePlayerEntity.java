@@ -13,10 +13,10 @@ import org.newdawn.slick.SpriteSheet;
 public class GamePlayerEntity extends GameNpcEntity {
     Input playerInput;
 
-    public GamePlayerEntity(float x, float y, float depth, SpriteSheet spriteSheet, Input playerInput) {
-        super(x, y, depth, spriteSheet);
+    public GamePlayerEntity(float x, float y, float depth, SpriteSheet spriteSheet, GameWorld world) {
+        super(x, y, depth, spriteSheet, world);
 
-        this.playerInput = playerInput;
+        this.playerInput = world.playerInput;
     }
 
     @Override
@@ -37,7 +37,9 @@ public class GamePlayerEntity extends GameNpcEntity {
 
             if (dx != 0 || dy != 0) {
                 if (this.canMoveInDirection(dx, dy, world.collisionMap))
-                    world.actionQueue.add(new GameNpcMovementAction(movementTick, this, dx, dy));
+                    world.actionQueue.add(new GameNpcMovementAction(movementTick, this, dx, dy, world));
+                else
+                    this.faceDirection(dx, dy);
             }
         }
 

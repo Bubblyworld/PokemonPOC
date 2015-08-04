@@ -25,7 +25,7 @@ public class GameWalkingState extends BasicGameState {
 
         //Load pallet town and route one for the proof-of-concept.
         List<GameMapInit> mapInits = new ArrayList<>();
-        mapInits.add(new GamePalletTownInit());
+        mapInits.add(new GamePalletTownInit(96, 128));
         mapInits.add(new GameRouteOneInit());
         world.enterMaps(mapInits);
     }

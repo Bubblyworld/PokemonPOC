@@ -1,17 +1,24 @@
 package PokemonPOC.GameMapInits;
 
 import PokemonPOC.GameCore.GameWorld;
+import PokemonPOC.GameEntities.GameMapTriggerEntity;
 import PokemonPOC.GameEntities.GamePlayerEntity;
 import PokemonPOC.GameEntities.GameStaticEntity;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 
+import java.util.ArrayList;
+
 /**
  * Created by guy on 8/3/15.
  * The hero's house, first floor.
  */
 public class GamePalletHeroHouse1FInit extends GameMapInit {
+    public GamePalletHeroHouse1FInit(float playerX, float playerY) {
+        super(playerX, playerY);
+    }
+
     @Override
     public void initCollision(GameWorld world) {
         world.collisionMap.addCollisionBox(0, 0, 192, 32); //top wall
@@ -28,17 +35,26 @@ public class GamePalletHeroHouse1FInit extends GameMapInit {
         world.entities.add(new GameStaticEntity(0, 0, 0, houseImage));
         world.entities.add(new GameStaticEntity(43, 132, 0, matImage));
 
-        //Trigger to go back to the outside world //TODO
+        //Back to pallet town trigger.
+        ArrayList<GameMapInit> palletInits = new ArrayList<>();
+        palletInits.add(new GamePalletTownInit(96, 128));
+        world.entities.add(new GameMapTriggerEntity(48, 144, 0, palletInits));
+
+        //Second floor trigger.
+        ArrayList<GameMapInit> floorInits = new ArrayList<>();
+        floorInits.add(new GamePalletHeroHouse2FInit(144, 32));
+        world.entities.add(new GameMapTriggerEntity(160, 32, 0, floorInits));
     }
 
     @Override
     public void initNpcs(GameWorld world) throws SlickException {
         SpriteSheet playerSheet = new SpriteSheet("assets/player.png", 16, 32);
 
-        GamePlayerEntity player = new GamePlayerEntity(48, 128, 1, playerSheet, world.playerInput);
-        player.setSprite(GamePlayerEntity.FACE_UP, 1);
-        world.entities.add(player);
-        world.camera = player;
+        if (this.isPlayerInitialised) {
+            GamePlayerEntity player = new GamePlayerEntity(this.playerX, this.playerY, 1, playerSheet, world);
+            world.entities.add(player);
+            world.camera = player;
+        }
     }
 
     @Override

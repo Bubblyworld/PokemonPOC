@@ -1,8 +1,10 @@
 package PokemonPOC.GameActions;
 
 import PokemonPOC.Constants;
+import PokemonPOC.GameCore.GameCollisionBox;
 import PokemonPOC.GameEntities.GameNpcEntity;
 import PokemonPOC.GameCore.GameWorld;
+import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 
 /**
  * Created by guy on 8/1/15.
@@ -15,7 +17,7 @@ public class GameNpcMovementAction extends GameAction {
     float startX, startY;
     int dx, dy;
 
-    public GameNpcMovementAction(long activationTick, GameNpcEntity entity, int dx, int dy) {
+    public GameNpcMovementAction(long activationTick, GameNpcEntity entity, int dx, int dy, GameWorld world) {
         super(activationTick);
 
         this.lastUpdateTickF = activationTick;
@@ -26,7 +28,17 @@ public class GameNpcMovementAction extends GameAction {
         startX = entity.x;
         startY = entity.y;
 
+        //Update entity, along with its collision box.
         entity.busyWithAction = true;
+        world.collisionMap.entities.remove(entity.collisionBox);
+
+        entity.collisionBox = new GameCollisionBox(
+                entity.x + dx*Constants.BLOCK_SIZE,
+                entity.y + dy*Constants.BLOCK_SIZE,
+                entity.x + dx*Constants.BLOCK_SIZE + 16,
+                entity.y + dy*Constants.BLOCK_SIZE + 16
+        );
+        world.collisionMap.entities.add(entity.collisionBox);
     }
 
     @Override
