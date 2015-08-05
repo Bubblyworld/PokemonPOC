@@ -1,11 +1,12 @@
 package PokemonPOC;
 
-import PokemonPOC.GameCore.GameWorld;
-import PokemonPOC.GameMapInits.GameMapInit;
-import PokemonPOC.GameMapInits.GamePalletTownInit;
-import PokemonPOC.GameMapInits.GameRouteOneInit;
+import PokemonPOC.Core.World;
+import PokemonPOC.MapInits.MapInit;
+import PokemonPOC.MapInits.PalletTownInit;
+import PokemonPOC.MapInits.RouteOneInit;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
@@ -18,32 +19,29 @@ in-game areas.
 */
 public class GameWalkingState extends BasicGameState {
     //PokemonPOC.Game world data.
-    GameWorld world;
+    World world;
 
     public void init(GameContainer container, StateBasedGame game) {
-        world = new GameWorld(container);
+        world = new World(container);
 
         //Load pallet town and route one for the proof-of-concept.
-        List<GameMapInit> mapInits = new ArrayList<>();
-        mapInits.add(new GamePalletTownInit(96, 128));
-        mapInits.add(new GameRouteOneInit());
+        List<MapInit> mapInits = new ArrayList<>();
+        mapInits.add(new PalletTownInit(96, 128));
+        mapInits.add(new RouteOneInit());
         world.enterMaps(mapInits);
     }
 
+    @Override
     public void render(GameContainer container, StateBasedGame game, Graphics graphics) {
         world.render(container, game, graphics);
     }
 
+    @Override
     public void update(GameContainer container, StateBasedGame game, int delta) {
         world.update(container, game, delta);
     }
 
-    public void enter(GameContainer container, StateBasedGame game) {
-    }
-
-    public void leave(GameContainer container, StateBasedGame game) {
-    }
-
+    @Override
     public int getID() {
         return Constants.GAME_WALKING_STATE_ID;
     }

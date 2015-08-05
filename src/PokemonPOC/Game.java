@@ -10,6 +10,7 @@ public class Game extends StateBasedGame {
 
     public void initStatesList(GameContainer container) {
         addState(new GameWalkingState());
+        addState(new GameDialogueState());
 
         enterState(Constants.GAME_WALKING_STATE_ID);
     }

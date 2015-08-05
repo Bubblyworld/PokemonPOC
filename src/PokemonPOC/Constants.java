@@ -2,6 +2,7 @@ package PokemonPOC;
 
 public class Constants {
     public static final int GAME_WALKING_STATE_ID = 0;
+    public static final int GAME_DIALOGUE_STATE_ID = 1;
 
     //We make a distinction between tiles(16x16) and blocks(32x32).
     //Blocks represent what visibly appears to be a tile, but the pokemon engine
