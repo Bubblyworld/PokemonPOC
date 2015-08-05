@@ -44,14 +44,6 @@ public class PlayerEntity extends NpcEntity {
                 else
                     this.faceDirection(dx, dy);
             }
-
-            /**
-             * DEBUG Testing the dialogue state.
-             */
-            if (playerInput.isKeyPressed(Input.KEY_SPACE)) {
-                Dialogue dialogue = new TextDialogue(world.font, "Well, hello there!", 0, 4);
-                world.actionQueue.add(new DialogueAction(world.currentTick, dialogue));
-            }
         }
 
         return true;

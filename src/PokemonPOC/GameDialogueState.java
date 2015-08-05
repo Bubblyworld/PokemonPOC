@@ -4,6 +4,7 @@ import PokemonPOC.Core.World;
 import PokemonPOC.Dialogues.Dialogue;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
@@ -15,6 +16,8 @@ import org.newdawn.slick.state.StateBasedGame;
  * We also need a Talk object to give us the dialogue and
  */
 public class GameDialogueState extends BasicGameState {
+    Image dialogueImage;
+
     Dialogue currentDialogue;
     World world;
 
@@ -27,6 +30,8 @@ public class GameDialogueState extends BasicGameState {
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
         currentDialogue = null;
         world = null;
+
+        dialogueImage = new Image("assets/dialogue.png");
     }
 
     public void reinit(Dialogue dialogue, World world) {
@@ -40,14 +45,17 @@ public class GameDialogueState extends BasicGameState {
         if (world != null)
             world.render(container, game, g);
 
+        //Render the dialogue image.
+        dialogueImage.draw(0, Constants.SCREEN_HEIGHT - 110);
+
         //Render the current dialogue if it exists.
         if (currentDialogue != null) {
             currentDialogue.render(
                     g,
-                    Constants.SCREEN_WIDTH / 10,
-                    Constants.SCREEN_HEIGHT * 3 / 4,
-                    Constants.SCREEN_WIDTH * 9 / 10,
-                    Constants.SCREEN_HEIGHT
+                    30,
+                    Constants.SCREEN_HEIGHT - 100,
+                    Constants.SCREEN_WIDTH - 30,
+                    Constants.SCREEN_HEIGHT - 10
             );
         }
     }

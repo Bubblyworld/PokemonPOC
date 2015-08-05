@@ -1,6 +1,7 @@
 package PokemonPOC.MapInits;
 
 import PokemonPOC.Core.World;
+import PokemonPOC.Dialogues.TextDialogue;
 import PokemonPOC.Entities.*;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
@@ -67,7 +68,22 @@ public class PalletTownInit extends MapInit {
         SpriteSheet hikerSheet = new SpriteSheet("assets/hiker.png", 16, 32);
 
         //Add a hiker npc in the bottom right corner.
-        world.entities.add(new NpcEntity(320, 288, 1, hikerSheet, world));
+        world.entities.add(
+                new DialogueDecorator(
+                        new NpcEntity(320, 288, 1, hikerSheet, world),
+                        new TextDialogue(
+                                world.font,
+                                "Well, hello there!",
+                                4
+                        ).setNext(
+                                new TextDialogue(
+                                        world.font,
+                                        "Oh, alright then. Moving onwards.",
+                                        4
+                                )
+                        )
+                )
+        );
 
         //Initialise player if we need to.
         if (this.isPlayerInitialised) {

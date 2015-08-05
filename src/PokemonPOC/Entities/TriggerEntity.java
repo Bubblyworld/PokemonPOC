@@ -8,6 +8,7 @@ import PokemonPOC.Core.World;
  * off the entity. isSteppedOn is true if there is currently a player standing
  * on the trigger entity.
  */
+//TODO make this a decorator
 public abstract class TriggerEntity extends Entity {
     boolean isSteppedOn;
 

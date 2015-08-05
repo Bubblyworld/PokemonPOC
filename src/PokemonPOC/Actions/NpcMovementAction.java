@@ -4,6 +4,7 @@ import PokemonPOC.Constants;
 import PokemonPOC.Core.CollisionBox;
 import PokemonPOC.Entities.NpcEntity;
 import PokemonPOC.Core.World;
+import org.newdawn.slick.state.StateBasedGame;
 
 /**
  * Created by guy on 8/1/15.
@@ -41,7 +42,7 @@ public class NpcMovementAction extends Action {
     }
 
     @Override
-    public void update(float currentTickF, World world) {
+    public void update(float currentTickF, World world, StateBasedGame game) {
         float deltaTickF = currentTickF - lastUpdateTickF;
 
         //We move the entity first.

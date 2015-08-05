@@ -20,6 +20,7 @@ public class NpcEntity extends Entity {
     public SpriteSheet spriteSheet;
     public int spriteX, spriteY;
     public boolean flipSpriteHorizontally;
+    public int currentDirection;
 
     //Are we currently busy doing an action?
     public boolean busyWithAction;
@@ -54,7 +55,7 @@ public class NpcEntity extends Entity {
         if (!this.busyWithAction) {
             //TODO no hardcoding, additional AIs?
             //TODO this is terrible random walking gen, depends on processor speed
-            float movesPerTick = 0.5f;
+            float movesPerTick = 0.05f;
             if (Math.random() < tickDelta * movesPerTick) {
                 long movementTick = getMovementTick(currentTickF);
                 int randomDirection = (int) (Math.random() * 4);
@@ -111,6 +112,7 @@ public class NpcEntity extends Entity {
     }
 
     public void setSprite(int currentDirection, int currentStep) {
+        this.currentDirection = currentDirection;
         flipSpriteHorizontally = false;
         spriteY = currentDirection;
         spriteX = currentStep;
@@ -124,5 +126,25 @@ public class NpcEntity extends Entity {
         if (currentStep == 3) {
             spriteX = 1;
         }
+    }
+
+    /**
+     * Are we facing the given position?
+     */
+    public boolean isFacing(float px, float py) {
+        //First check they are in an adjacent block
+        if (Math.abs(px - x) + Math.abs(py - y) - Constants.BLOCK_SIZE > Constants.EPSILON)
+            return false;
+
+        //Check that we are facing them
+        int dx = Math.round((px - x) / Constants.BLOCK_SIZE);
+        int dy = Math.round((py - y) / Constants.BLOCK_SIZE);
+
+        if (dx == -1 && dy == 0 && currentDirection == FACE_LEFT) return true;
+        if (dx == +1 && dy == 0 && currentDirection == FACE_RIGHT) return true;
+        if (dx == 0 && dy == -1 && currentDirection == FACE_UP) return true;
+        if (dx == 0 && dy == +1 && currentDirection == FACE_DOWN) return true;
+
+        return false;
     }
 }

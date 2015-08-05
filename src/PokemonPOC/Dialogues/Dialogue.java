@@ -32,6 +32,11 @@ public abstract class Dialogue {
     public abstract Dialogue update(float tickDelta, World world);
 
     /**
+     * Reset the dialogue for next time.
+     */
+    public abstract void reset();
+
+    /**
      * Renders the dialogue within the given box.
      */
     public abstract void render(Graphics graphics, float x1, float y1, float x2, float y2);
@@ -43,9 +48,11 @@ public abstract class Dialogue {
     public List<String> splitText(String text, float maxWidth) {
         List<String> result = new ArrayList<>();
 
-        String currentWord = "";
         String[] words = text.split(" ");
-        for (String word : words) {
+        String currentWord = words[0];
+        for (int i = 1; i < words.length; i++) {
+            String word = words[i];
+
             if (font.getWidth(currentWord + " " + word) <= maxWidth)
                 currentWord += " " + word;
             else {

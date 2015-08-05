@@ -22,23 +22,22 @@ public class TextDialogue extends Dialogue {
     public float currentIndex;
     public float indicesPerTick;
 
-    public TextDialogue(Font font, String text, float currentIndex, float indicesPerTick) {
+    public TextDialogue(Font font, String text, float indicesPerTick) {
         super(font);
 
         this.next = null;
         this.text = text;
-        this.currentIndex = currentIndex;
         this.indicesPerTick = indicesPerTick;
+        this.currentIndex = 0;
     }
 
     /**
-     * Add the given dialogue as the next in the chain after this one. Returns the given Dialogue
-     * to allow cool chaining syntax. Kind of like a Monad.
+     * Add the given dialogue as the next in the chain after this one.
      */
-    public Dialogue chain(Dialogue next) {
+    public Dialogue setNext(Dialogue next) {
         this.next = next;
 
-        return next;
+        return this;
     }
 
     @Override
@@ -55,11 +54,18 @@ public class TextDialogue extends Dialogue {
 
         //If we are at the end of the text, pressing Z continues to the next in chain.
         if (currentIndex >= text.length()) {
-            if (world.playerInput.isKeyPressed(Input.KEY_Z))
+            if (world.playerInput.isKeyDown(Input.KEY_Z))
                 return next;
         }
 
         return this;
+    }
+
+    @Override
+    public void reset() {
+        currentIndex = 0;
+
+        if (next != null) next.reset();
     }
 
     @Override

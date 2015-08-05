@@ -1,6 +1,7 @@
 package PokemonPOC.Actions;
 
 import PokemonPOC.Core.World;
+import org.newdawn.slick.state.StateBasedGame;
 
 /**
  * Models an action that happens at a particular game tick.
@@ -19,7 +20,7 @@ public abstract class Action implements Comparable<Action> {
         this.isComplete = false;
     }
 
-    public abstract void update(float currentTickF, World world);
+    public abstract void update(float currentTickF, World world, StateBasedGame game);
 
     public void setComplete() {
         isComplete = true;

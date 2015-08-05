@@ -1,7 +1,10 @@
 package PokemonPOC.Actions;
 
+import PokemonPOC.Constants;
 import PokemonPOC.Core.World;
 import PokemonPOC.Dialogues.Dialogue;
+import PokemonPOC.GameDialogueState;
+import org.newdawn.slick.state.StateBasedGame;
 
 /**
  * Created by guy on 8/4/15.
@@ -14,10 +17,18 @@ public class DialogueAction extends Action {
         super(activationTick);
 
         this.dialogue = dialogue;
+        dialogue.reset();
     }
 
     @Override
-    public void update(float currentTickF, World world) {
+    public void update(float currentTickF, World world, StateBasedGame game) {
+        //Dialogue time deeeesu!
+        GameDialogueState dialogueState =
+                (GameDialogueState) game.getState(Constants.GAME_DIALOGUE_STATE_ID);
+
+        dialogueState.reinit(dialogue, world);
+        game.enterState(Constants.GAME_DIALOGUE_STATE_ID);
+
         this.setComplete();
     }
 }

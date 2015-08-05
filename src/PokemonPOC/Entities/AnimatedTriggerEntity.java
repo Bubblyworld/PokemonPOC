@@ -9,9 +9,6 @@ import org.newdawn.slick.SpriteSheet;
  * Creates an animation when the player steps on or off something.
  * This is used to create movement effects through grass, for instance.
  * Animations can be passed in as NULL, in which case they aren't displayed.
- *
- * TODO: how do we handle lifespan nicely here?
- *       perhaps we need an animation data wrapper or something somewhere.
  */
 public class AnimatedTriggerEntity extends TriggerEntity {
     SpriteSheet onAnimation, offAnimation;

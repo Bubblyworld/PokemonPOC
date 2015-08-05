@@ -18,5 +18,7 @@ public class Constants {
     public static final int SCREEN_WIDTH = 600;
     public static final int SCREEN_HEIGHT = 400;
 
+    //For floating point comparison.
     public static final float INFINITY = 999999999.0f;
+    public static final float EPSILON = 0.0000001f;
 }

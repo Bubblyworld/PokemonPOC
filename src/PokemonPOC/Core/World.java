@@ -99,17 +99,7 @@ public class World {
         while(!actionQueue.isEmpty() && actionQueue.peek().activationTick <= currentTick) {
             Action action = actionQueue.poll();
 
-            //Test for special cases of action.
-            //TODO NEATER WAYS?
-            if (action instanceof DialogueAction) {
-                GameDialogueState dialogueState =
-                        (GameDialogueState) game.getState(Constants.GAME_DIALOGUE_STATE_ID);
-
-                dialogueState.reinit(((DialogueAction) action).dialogue, this);
-                game.enterState(Constants.GAME_DIALOGUE_STATE_ID);
-            }
-
-            action.update(currentTickF, this);
+            action.update(currentTickF, this, game);
             if (!action.isComplete)
                 unfinishedActions.add(action);
         }

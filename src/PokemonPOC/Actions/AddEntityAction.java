@@ -2,6 +2,7 @@ package PokemonPOC.Actions;
 
 import PokemonPOC.Core.World;
 import PokemonPOC.Entities.Entity;
+import org.newdawn.slick.state.StateBasedGame;
 
 /**
  * Created by guy on 8/4/15.
@@ -19,8 +20,9 @@ public class AddEntityAction extends Action {
     }
 
     @Override
-    public void update(float currentTickF, World world) {
+    public void update(float currentTickF, World world, StateBasedGame game) {
         world.entities.add(entity);
+
         this.setComplete();
     }
 }
