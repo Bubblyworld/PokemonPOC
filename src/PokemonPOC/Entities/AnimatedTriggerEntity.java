@@ -22,7 +22,7 @@ public class AnimatedTriggerEntity extends TriggerEntity {
         this.onAnimation = onAnimation;
         this.offAnimation = offAnimation;
 
-        this.lifespan = offAnimation.getHorizontalCount() * framesPerTick;
+        this.lifespan = offAnimation.getHorizontalCount() / framesPerTick;
     }
 
     @Override

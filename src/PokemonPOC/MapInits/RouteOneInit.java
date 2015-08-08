@@ -3,6 +3,7 @@ package PokemonPOC.MapInits;
 import PokemonPOC.Constants;
 import PokemonPOC.Core.World;
 import PokemonPOC.Entities.AnimatedTriggerEntity;
+import PokemonPOC.Entities.PartialRenderDecorator;
 import PokemonPOC.Entities.StaticEntity;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
@@ -25,14 +26,16 @@ public class RouteOneInit extends MapInit {
         SpriteSheet grassSheet = new SpriteSheet("assets/grass_animation.png", 16, 16);
         for (int y = 0; y < 5; y++) {
             for (int x = 0; x < 2; x++) {
-                world.entities.add(new AnimatedTriggerEntity(
+                world.entities.add(
+                    new AnimatedTriggerEntity(
                         192 + x * Constants.BLOCK_SIZE,
                         -16 - y * Constants.BLOCK_SIZE,
                         0,
                         2.0f,
                         null,
                         grassSheet
-                ));
+                    )
+                );
             }
         }
     }
@@ -45,12 +48,18 @@ public class RouteOneInit extends MapInit {
         Image grassImage = new Image("assets/grass_top.png");
         for (int y = 0; y < 5; y++) {
             for (int x = 0; x < 2; x++) {
-                world.entities.add(new StaticEntity(
-                        192 + x * Constants.BLOCK_SIZE,
-                        -16 - y * Constants.BLOCK_SIZE,
-                        2,
-                        grassImage
-                ));
+                world.entities.add(
+                    new PartialRenderDecorator(
+                        new StaticEntity(
+                            192 + x * Constants.BLOCK_SIZE,
+                            -16 - y * Constants.BLOCK_SIZE,
+                            2,
+                            grassImage
+                        ),
+                        Constants.BLOCK_SIZE,
+                        Constants.BLOCK_SIZE / 4
+                    )
+                );
             }
         }
     }
