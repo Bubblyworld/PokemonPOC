@@ -22,11 +22,10 @@ public class DialogueAction extends Action {
 
     @Override
     public void update(float currentTickF, World world, StateBasedGame game) {
-        //Dialogue time deeeesu!
         GameDialogueState dialogueState =
                 (GameDialogueState) game.getState(Constants.GAME_DIALOGUE_STATE_ID);
 
-        dialogueState.reinit(dialogue, world);
+        dialogueState.updateDialogue(dialogue, world);
         game.enterState(Constants.GAME_DIALOGUE_STATE_ID);
 
         this.setComplete();

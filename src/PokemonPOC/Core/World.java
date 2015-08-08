@@ -1,10 +1,8 @@
 package PokemonPOC.Core;
 
-import PokemonPOC.Actions.DialogueAction;
 import PokemonPOC.Constants;
 import PokemonPOC.Actions.Action;
 import PokemonPOC.Entities.Entity;
-import PokemonPOC.GameDialogueState;
 import PokemonPOC.MapInits.MapInit;
 import org.newdawn.slick.*;
 import org.newdawn.slick.Color;

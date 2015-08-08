@@ -34,7 +34,7 @@ public class GameDialogueState extends BasicGameState {
         dialogueImage = new Image("assets/dialogue.png");
     }
 
-    public void reinit(Dialogue dialogue, World world) {
+    public void updateDialogue(Dialogue dialogue, World world) {
         this.currentDialogue = dialogue;
         this.world = world;
     }
@@ -70,5 +70,12 @@ public class GameDialogueState extends BasicGameState {
             currentDialogue = currentDialogue.update(deltaTicks, world);
         } else
             game.enterState(Constants.GAME_WALKING_STATE_ID);
+    }
+
+    @Override
+    public void enter(GameContainer container, StateBasedGame game) throws SlickException {
+        //Give us a clean input slate.
+        world.playerInput.clearMousePressedRecord();
+        world.playerInput.clearKeyPressedRecord();
     }
 }

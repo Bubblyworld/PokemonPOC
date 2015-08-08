@@ -54,8 +54,11 @@ public class TextDialogue extends Dialogue {
 
         //If we are at the end of the text, pressing Z continues to the next in chain.
         if (currentIndex >= text.length()) {
-            if (world.playerInput.isKeyDown(Input.KEY_Z))
+            if (world.playerInput.isKeyPressed(Input.KEY_Z))
                 return next;
+        } else {
+            //Reset the record so it doesn't persist till the end of the dialogue.
+            world.playerInput.clearKeyPressedRecord();
         }
 
         return this;

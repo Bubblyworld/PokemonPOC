@@ -29,7 +29,7 @@ public class DialogueDecorator extends EntityDecorator {
 
                 //If they are facing us, and pressing Z, trigger the dialogue.
                 if (player.isFacing(this.entity.x, this.entity.y)) {
-                    if (player.playerInput.isKeyDown(Input.KEY_Z))
+                    if (player.playerInput.isKeyPressed(Input.KEY_Z))
                         world.actionQueue.add(new DialogueAction(world.currentTick, dialogue));
                 }
             }

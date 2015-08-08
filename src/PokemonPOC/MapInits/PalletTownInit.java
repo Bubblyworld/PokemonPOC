@@ -54,7 +54,16 @@ public class PalletTownInit extends MapInit {
 
         for (int y = 0; y < 2; y++) {
             for (int x = 0; x < 3; x++) {
-                world.entities.add(new AnimatedEntity(96 + x*16, 192 + y*16, 0, flowerSheet, 1.0f));
+                world.entities.add(
+                        new DialogueDecorator(
+                                new AnimatedEntity(96 + x*16, 192 + y*16, 0, flowerSheet, 1.0f),
+                                new TextDialogue(
+                                        world.font,
+                                        "Flowers deeeeesu!",
+                                        4
+                                )
+                        )
+                );
             }
         }
 

@@ -42,6 +42,13 @@ public class GameWalkingState extends BasicGameState {
     }
 
     @Override
+    public void enter(GameContainer container, StateBasedGame game) throws SlickException {
+        //Give us a clean input slate.
+        world.playerInput.clearMousePressedRecord();
+        world.playerInput.clearKeyPressedRecord();
+    }
+
+    @Override
     public int getID() {
         return Constants.GAME_WALKING_STATE_ID;
     }
