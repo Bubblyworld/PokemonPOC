@@ -19,6 +19,11 @@ public class EntityDecorator extends Entity {
     }
 
     @Override
+    public Entity clone() {
+        return new EntityDecorator(entity);
+    }
+
+    @Override
     public boolean update(float currentTickF, float tickDelta, World world) {
         return entity.update(currentTickF, tickDelta, world);
     }

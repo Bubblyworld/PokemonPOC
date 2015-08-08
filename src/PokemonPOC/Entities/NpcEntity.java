@@ -34,6 +34,9 @@ public class NpcEntity extends Entity {
     //Collision box for this sprite.
     public CollisionBox collisionBox;
 
+    //Reference to the world for cloning.
+    World worldReference;
+
     public NpcEntity(float x, float y, float depth, SpriteSheet spriteSheet, World world) {
         super(x, y, depth);
 
@@ -47,6 +50,13 @@ public class NpcEntity extends Entity {
         //Add a collision box for this sprite
         collisionBox = new CollisionBox(x, y, x + Constants.BLOCK_SIZE, y + Constants.BLOCK_SIZE);
         world.collisionMap.entities.add(collisionBox);
+
+        this.worldReference = world;
+    }
+
+    @Override
+    public Entity clone() {
+        return new NpcEntity(x, y, depth, spriteSheet, worldReference);
     }
 
     @Override

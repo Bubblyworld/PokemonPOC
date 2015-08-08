@@ -29,4 +29,9 @@ public class MapTriggerEntity extends TriggerEntity {
     public boolean playerStepsOff(World world, PlayerEntity player) {
         return true;
     }
+
+    @Override
+    public Entity clone() {
+        return new MapTriggerEntity(x, y, depth, mapInits);
+    }
 }

@@ -34,6 +34,11 @@ public class AnimatedEntity extends Entity {
     }
 
     @Override
+    public Entity clone() {
+        return new AnimatedEntity(x, y, depth, spriteSheet, framesPerTick, lifespan);
+    }
+
+    @Override
     public boolean update(float currentTickF, float tickDelta, World world) {
         //Update the current life length;
         currentLife += tickDelta;

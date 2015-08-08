@@ -21,6 +21,7 @@ public abstract class Entity {
         this.isDead = false;
     }
 
+    public abstract Entity clone();
     public abstract boolean update(float currentTickF, float tickDelta, World world);
     public abstract void render(float cameraX, float cameraY);
 }

@@ -19,6 +19,11 @@ public class TileMapEntity extends Entity {
         this.yCopies = yCopies;
     }
 
+    @Override
+    public Entity clone() {
+        return new TileMapEntity(x, y, depth, image, xCopies, yCopies);
+    }
+
     public boolean update(float currentTickF, float tickDelta, World world) {
         return true;
     }

@@ -52,4 +52,9 @@ public class AnimatedTriggerEntity extends TriggerEntity {
 
         return true;
     }
+
+    @Override
+    public Entity clone() {
+        return new AnimatedTriggerEntity(x, y, depth, framesPerTick, onAnimation, offAnimation);
+    }
 }

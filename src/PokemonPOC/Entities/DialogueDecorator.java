@@ -19,6 +19,11 @@ public class DialogueDecorator extends EntityDecorator {
     }
 
     @Override
+    public Entity clone() {
+        return new DialogueDecorator(entity, dialogue);
+    }
+
+    @Override
     public boolean update(float currentTickF, float tickDelta, World world) {
         if (!super.update(currentTickF, tickDelta, world))
             return false;

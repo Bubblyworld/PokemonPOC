@@ -17,6 +17,11 @@ public class StaticEntity extends Entity {
     }
 
     @Override
+    public Entity clone() {
+        return new StaticEntity(x, y, depth, image);
+    }
+
+    @Override
     public boolean update(float currentTickF, float tickDelta, World world) {
         return true;
     }

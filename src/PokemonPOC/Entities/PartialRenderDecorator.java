@@ -22,6 +22,11 @@ public class PartialRenderDecorator extends EntityDecorator {
     }
 
     @Override
+    public Entity clone() {
+        return new PartialRenderDecorator(entity, xDist, yDist);
+    }
+
+    @Override
     public boolean update(float currentTickF, float tickDelta, World world) {
         if (!super.update(currentTickF, tickDelta, world))
             return false;

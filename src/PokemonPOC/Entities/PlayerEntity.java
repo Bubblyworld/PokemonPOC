@@ -23,6 +23,11 @@ public class PlayerEntity extends NpcEntity {
     }
 
     @Override
+    public Entity clone() {
+        return new PlayerEntity(x, y, depth, spriteSheet, worldReference);
+    }
+
+    @Override
     /**
      * If we aren't busy with something already, allow arrows to control the players'
      * movement.
