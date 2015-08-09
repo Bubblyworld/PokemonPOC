@@ -8,26 +8,28 @@ import PokemonPOC.Core.World;
  * off the entity. isSteppedOn is true if there is currently a player standing
  * on the trigger entity.
  */
-//TODO make this a decorator
-public abstract class TriggerEntity extends Entity {
+
+public abstract class TriggerDecorator extends EntityDecorator {
     boolean isSteppedOn;
 
-    public TriggerEntity(float x, float y, float depth) {
-        super(x, y, depth);
+    public TriggerDecorator(Entity entity) {
+        super(entity);
 
         this.isSteppedOn = false;
     }
 
     public boolean update(float currentTickF, float tickDelta, World world) {
+        if (!super.update(currentTickF, tickDelta, world))
+            return false;
+
         //Run through each entity - if it is a player, see if it is stepping on us or not.
         for (Entity entity : world.entities) {
             if (entity instanceof PlayerEntity) {
-                if (entity.x == x && entity.y == y) {
+                if (entity.x == this.entity.x && entity.y == this.entity.y) {
                     if (!isSteppedOn) {
                         isSteppedOn = true;
-                        if (!playerStepsOn(world, (PlayerEntity) entity)) {
+                        if (!playerStepsOn(world, (PlayerEntity) entity))
                             return false;
-                        }
                     }
                 } else {
                     if (isSteppedOn) {
@@ -40,9 +42,6 @@ public abstract class TriggerEntity extends Entity {
         }
 
         return true;
-    }
-
-    public void render(float cameraX, float cameraY) {
     }
 
     public abstract boolean playerStepsOn(World world, PlayerEntity player);

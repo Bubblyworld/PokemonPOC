@@ -20,7 +20,7 @@ public class DialogueDecorator extends EntityDecorator {
 
     @Override
     public Entity clone() {
-        return new DialogueDecorator(entity, dialogue);
+        return new DialogueDecorator(entity.clone(), dialogue);
     }
 
     @Override

@@ -20,11 +20,15 @@ public class EntityDecorator extends Entity {
 
     @Override
     public Entity clone() {
-        return new EntityDecorator(entity);
+        return new EntityDecorator(entity.clone());
     }
 
     @Override
     public boolean update(float currentTickF, float tickDelta, World world) {
+        //Check whether the child entity is dead. If it is, we need to die too.
+        if (entity.isDead)
+            this.isDead = true;
+
         return entity.update(currentTickF, tickDelta, world);
     }
 

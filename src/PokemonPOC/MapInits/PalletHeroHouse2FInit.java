@@ -1,7 +1,7 @@
 package PokemonPOC.MapInits;
 
 import PokemonPOC.Core.World;
-import PokemonPOC.Entities.MapTriggerEntity;
+import PokemonPOC.Entities.MapTriggerDecorator;
 import PokemonPOC.Entities.PlayerEntity;
 import PokemonPOC.Entities.StaticEntity;
 import org.newdawn.slick.Image;
@@ -32,7 +32,12 @@ public class PalletHeroHouse2FInit extends MapInit {
 
         ArrayList<MapInit> mapInits = new ArrayList<>();
         mapInits.add(new PalletHeroHouse1FInit(144, 32));
-        world.entities.add(new MapTriggerEntity(128, 32, 0, mapInits));
+        world.entities.add(
+                new MapTriggerDecorator(
+                        new StaticEntity(128, 32, 0),
+                        mapInits
+                )
+        );
     }
 
     @Override

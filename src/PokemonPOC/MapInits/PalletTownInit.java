@@ -70,7 +70,12 @@ public class PalletTownInit extends MapInit {
         //Trigger to get into the hero's house.
         ArrayList<MapInit> heroHouse = new ArrayList<>();
         heroHouse.add(new PalletHeroHouse1FInit(48, 128));
-        world.entities.add(new MapTriggerEntity(96, 112, 0, heroHouse));
+        world.entities.add(
+                new MapTriggerDecorator(
+                        new StaticEntity(96, 112, 0),
+                        heroHouse
+                )
+        );
     }
 
     public void initNpcs(World world) throws SlickException {

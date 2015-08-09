@@ -23,7 +23,7 @@ public class PartialRenderDecorator extends EntityDecorator {
 
     @Override
     public Entity clone() {
-        return new PartialRenderDecorator(entity, xDist, yDist);
+        return new PartialRenderDecorator(entity.clone(), xDist, yDist);
     }
 
     @Override

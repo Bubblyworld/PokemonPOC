@@ -9,11 +9,11 @@ import java.util.List;
  * Created by guy on 8/3/15.
  * Creates an entity that triggers a map change, for instance a door.
  */
-public class MapTriggerEntity extends TriggerEntity {
+public class MapTriggerDecorator extends TriggerDecorator {
     List<MapInit> mapInits;
 
-    public MapTriggerEntity(float x, float y, float depth, List<MapInit> mapInits) {
-        super(x, y, depth);
+    public MapTriggerDecorator(Entity entity, List<MapInit> mapInits) {
+        super(entity);
 
         this.mapInits = mapInits;
     }
@@ -32,6 +32,6 @@ public class MapTriggerEntity extends TriggerEntity {
 
     @Override
     public Entity clone() {
-        return new MapTriggerEntity(x, y, depth, mapInits);
+        return new MapTriggerDecorator(entity.clone(), mapInits);
     }
 }

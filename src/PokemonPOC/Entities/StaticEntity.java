@@ -10,6 +10,10 @@ import org.newdawn.slick.Image;
 public class StaticEntity extends Entity {
     Image image;
 
+    public StaticEntity(float x, float y, float depth) {
+        this(x, y, depth, null);
+    }
+
     public StaticEntity(float x, float y, float depth, Image image) {
         super(x, y, depth);
 
@@ -31,6 +35,7 @@ public class StaticEntity extends Entity {
         float renderX = x - cameraX;
         float renderY = y - cameraY;
 
-        image.draw(renderX, renderY);
+        if (image != null)
+            image.draw(renderX, renderY);
     }
 }
