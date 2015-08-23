@@ -1,7 +1,7 @@
 package PokemonPOC.MapInits;
 
 import PokemonPOC.Core.World;
-import PokemonPOC.Dialogues.TextDialogue;
+import PokemonPOC.Dialogues.ScrollingDialogue;
 import PokemonPOC.Entities.*;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
@@ -57,7 +57,8 @@ public class PalletTownInit extends MapInit {
                 world.entities.add(
                         new DialogueDecorator(
                                 new AnimatedEntity(96 + x*16, 192 + y*16, 0, flowerSheet, 1.0f),
-                                new TextDialogue(
+                                new ScrollingDialogue(
+                                        null,
                                         world.font,
                                         "Flowers deeeeesu!",
                                         4
@@ -85,16 +86,16 @@ public class PalletTownInit extends MapInit {
         world.entities.add(
                 new DialogueDecorator(
                         new NpcEntity(320, 288, 1, hikerSheet, world),
-                        new TextDialogue(
-                                world.font,
-                                "Well, hello there!",
-                                4
-                        ).setNext(
-                                new TextDialogue(
+                        new ScrollingDialogue(
+                                new ScrollingDialogue(
+                                        null,
                                         world.font,
-                                        "Oh, alright then. Moving onwards.",
+                                        "Noooo! Don't go!",
                                         4
-                                )
+                                ),
+                                world.font,
+                                "KONNICHIHA! My neeemu isu Phoenixu Kirkwood-Chaan.",
+                                4
                         )
                 )
         );
@@ -109,7 +110,6 @@ public class PalletTownInit extends MapInit {
         }
     }
 
-    //TODO: this is a pass at creating a spritesheet on top so the player can walk behind things.
     // This will be replaced with proper spritesheets later.
     public void initTopSprites(World world) throws SlickException {
         //The tops of the houses for the player to walk under.

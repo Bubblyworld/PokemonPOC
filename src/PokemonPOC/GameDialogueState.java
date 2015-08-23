@@ -34,7 +34,7 @@ public class GameDialogueState extends BasicGameState {
         dialogueImage = new Image("assets/dialogue.png");
     }
 
-    public void updateDialogue(Dialogue dialogue, World world) {
+    public void updateState(Dialogue dialogue, World world) {
         this.currentDialogue = dialogue;
         this.world = world;
     }

@@ -15,9 +15,11 @@ import java.util.List;
  * textual link in the chain.
  */
 public abstract class Dialogue {
+    Dialogue next;
     Font font;
 
-    public Dialogue(Font font) {
+    public Dialogue(Dialogue next, Font font) {
+        this.next = next;
         this.font = font;
     }
 

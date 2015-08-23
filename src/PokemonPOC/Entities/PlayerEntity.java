@@ -1,10 +1,7 @@
 package PokemonPOC.Entities;
 
-import PokemonPOC.Actions.DialogueAction;
 import PokemonPOC.Actions.NpcMovementAction;
 import PokemonPOC.Core.World;
-import PokemonPOC.Dialogues.Dialogue;
-import PokemonPOC.Dialogues.TextDialogue;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SpriteSheet;
 

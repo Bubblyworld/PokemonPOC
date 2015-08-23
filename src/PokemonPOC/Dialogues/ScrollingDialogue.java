@@ -6,38 +6,25 @@ import org.newdawn.slick.Color;
 import org.newdawn.slick.Font;
 import org.newdawn.slick.Graphics;
 
-import java.awt.*;
 import java.util.List;
 
 /**
  * Created by guy on 8/4/15.
- * Standard text dialogue - no dialogue options, just pure rolling text.
+ * Standard text message - no options, just pure rolling text.
  * We link into the next dialogue via the next variable.
  */
-public class TextDialogue extends Dialogue {
-    public Dialogue next;
-
+public class ScrollingDialogue extends Dialogue {
     //Text, current position, and number of positions shown per tick.
     public String text;
     public float currentIndex;
     public float indicesPerTick;
 
-    public TextDialogue(Font font, String text, float indicesPerTick) {
-        super(font);
+    public ScrollingDialogue(Dialogue next, Font font, String text, float indicesPerTick) {
+        super(next, font);
 
-        this.next = null;
         this.text = text;
         this.indicesPerTick = indicesPerTick;
         this.currentIndex = 0;
-    }
-
-    /**
-     * Add the given dialogue as the next in the chain after this one.
-     */
-    public Dialogue setNext(Dialogue next) {
-        this.next = next;
-
-        return this;
     }
 
     @Override

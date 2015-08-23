@@ -25,7 +25,7 @@ public class DialogueAction extends Action {
         GameDialogueState dialogueState =
                 (GameDialogueState) game.getState(Constants.GAME_DIALOGUE_STATE_ID);
 
-        dialogueState.updateDialogue(dialogue, world);
+        dialogueState.updateState(dialogue, world);
         game.enterState(Constants.GAME_DIALOGUE_STATE_ID);
 
         this.setComplete();
