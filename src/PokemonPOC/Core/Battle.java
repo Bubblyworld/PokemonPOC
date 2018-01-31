@@ -2,10 +2,15 @@ package PokemonPOC.Core;
 
 import PokemonPOC.Displays.Display;
 import PokemonPOC.Pokemon.Pokemon;
+import org.newdawn.slick.Font;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.TrueTypeFont;
 import org.newdawn.slick.state.StateBasedGame;
 
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +27,9 @@ public class Battle {
     //List of current displays for the battle.
     public List<Display> displays;
 
+    //Battle font.
+    public Font font;
+
     public Battle(PlayerData playerOne, PlayerData playerTwo) {
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
@@ -34,7 +42,14 @@ public class Battle {
         }
 
         displays = new ArrayList<>();
-        //TODO: get first pokemon from the player's store
+
+        //Load battle font.
+        try {
+            java.awt.Font awtFont = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, new File("assets/pokemon.ttf"));
+            font = new TrueTypeFont(awtFont.deriveFont(24F), false);
+        } catch (FontFormatException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void render(GameContainer container, StateBasedGame game, Graphics graphics) {

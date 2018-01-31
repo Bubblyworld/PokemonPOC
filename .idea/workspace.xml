@@ -1,0 +1,1933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CabalLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cdb8a566-c846-43d1-8692-2dc020a40a2a" name="Default" comment="Started to add the data pipelining for battle scenes. Currently the game starts in a debug mode with two players facing off some squirtle, which I will shortly fix.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokemonPOC/Core/Battle.java" afterPath="$PROJECT_DIR$/src/PokemonPOC/Core/Battle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokemonPOC/Game.java" afterPath="$PROJECT_DIR$/src/PokemonPOC/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokemonPOC/Displays/StatusBarsDisplay.java" afterPath="$PROJECT_DIR$/src/PokemonPOC/Displays/StatusBarsDisplay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    </list>
+    <ignored path="PokemonPOC.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="PokemonPOC" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameWalkingState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/GameWalkingState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="89" selection-start-line="34" selection-start-column="89" selection-end-line="34" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Core/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2601156">
+              <caret line="75" column="15" selection-start-line="75" selection-start-column="15" selection-end-line="83" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StaticEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/StaticEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnimatedEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/AnimatedEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/PlayerEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NpcEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/NpcEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="93" column="50" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameDialogueState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/GameDialogueState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapInit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokemonPOC/MapInits/MapInit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+              <folding>
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Bubblyworld" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Actions/DialogueAction.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/Entity.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/AnimatedEntity.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/AnimatedTriggerEntity.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/MapTriggerEntity.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/PlayerEntity.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/NpcEntity.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/TileMapEntity.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/TriggerEntity.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/StaticEntity.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/MapInits/PalletHeroHouse1FInit.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/MapInits/PalletHeroHouse2FInit.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Actions/AddEntityAction.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/PartialRenderDecorator.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/MapTriggerDecorator.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/DialogueDecorator.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/AddEntityTriggerDecorator.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/TriggerDecorator.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Entities/EntityDecorator.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Dialogues/TextDialogue.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Messages/Dialogue.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Core/CollisionBox.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/MapInits/RouteOneInit.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Messages/Message.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Messages/AudioMessage.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/MapInits/PalletTownInit.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Messages/TextMessage.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Messages/ScrollingTextMessage.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Dialogues/AudioMessage.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Dialogues/TextMessage.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Dialogues/Dialogue.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Dialogues/ScrollingDialogue.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Battle/StatusBars.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Displays/StatusBars.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/BattleState.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Constants.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/GameDialogueState.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Displays/BackgroundDisplay.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Displays/DialogueDisplay.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Displays/Display.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Pokemon/PokemonStats.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Pokemon/Pokemon.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Displays/PokemonDisplay.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Core/PlayerData.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/BattleSelectState.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Displays/StatusBarsDisplay.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Core/Battle.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Game.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/GameWalkingState.java" />
+        <option value="$PROJECT_DIR$/src/PokemonPOC/Core/World.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-2" />
+    <option name="width" value="1370" />
+    <option name="height" value="742" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pokemon_poc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pokemon_poc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pokemon_poc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapInits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pokemon_poc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pokemon_poc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Displays" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pokemon_poc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dialogues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pokemon_poc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pokemon_poc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonPOC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hook" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/PokemonPOC/GameDialogueState.java" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="82" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="107" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="112" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1022" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="93" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="103" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="109" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1018" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/superfabulousmax/Hook.git" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="PokemonPOC.GameCore" />
+      <recent name="PokemonPOC.GameMapInits" />
+      <recent name="PokemonPOC.GameEntities" />
+      <recent name="PokemonPOC.GameActions" />
+      <recent name="PokemonPOC" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Pokemon">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CabalRunConfiguration" factoryName="Haskell">
+      <module name="" />
+      <setting name="executableName" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <environmetVariables />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="Pokemon" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="PokemonPOC.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pokemon_poc" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Pokemon" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdb8a566-c846-43d1-8692-2dc020a40a2a" name="Default" comment="" />
+      <created>1438428624133</created>
+      <option name="number" value="Default" />
+      <updated>1438428624133</updated>
+      <workItem from="1438428630082" duration="3288000" />
+      <workItem from="1438456831736" duration="2626000" />
+      <workItem from="1438459558566" duration="541000" />
+      <workItem from="1438460126565" duration="3074000" />
+      <workItem from="1438498675791" duration="5520000" />
+      <workItem from="1438504227481" duration="2837000" />
+      <workItem from="1438525694724" duration="6523000" />
+      <workItem from="1438552329234" duration="2437000" />
+      <workItem from="1438586901592" duration="3632000" />
+      <workItem from="1438602994372" duration="618000" />
+      <workItem from="1438671477987" duration="6580000" />
+      <workItem from="1438708346601" duration="331000" />
+      <workItem from="1438709642602" duration="1525000" />
+      <workItem from="1438718586241" duration="6517000" />
+      <workItem from="1438781904211" duration="101000" />
+      <workItem from="1438783806518" duration="1216000" />
+      <workItem from="1438801695414" duration="4100000" />
+      <workItem from="1438806125142" duration="5752000" />
+      <workItem from="1438844845077" duration="86000" />
+      <workItem from="1439065224644" duration="559000" />
+      <workItem from="1439066083849" duration="5893000" />
+      <workItem from="1439114489803" duration="830000" />
+      <workItem from="1439115353998" duration="6655000" />
+      <workItem from="1439124133155" duration="79000" />
+      <workItem from="1439124239007" duration="12000" />
+      <workItem from="1439124510209" duration="61000" />
+      <workItem from="1439643152280" duration="439000" />
+      <workItem from="1439653846487" duration="277000" />
+      <workItem from="1439898967728" duration="175000" />
+      <workItem from="1439904306298" duration="3736000" />
+      <workItem from="1440344364138" duration="5833000" />
+      <workItem from="1441010939683" duration="4678000" />
+      <workItem from="1441055144611" duration="1012000" />
+      <workItem from="1441282202383" duration="311000" />
+      <workItem from="1442237052613" duration="492000" />
+      <workItem from="1442263483499" duration="172000" />
+      <workItem from="1442747493334" duration="171000" />
+      <workItem from="1446720677081" duration="3112000" />
+      <workItem from="1446735048618" duration="47000" />
+      <workItem from="1446744376093" duration="30000" />
+      <workItem from="1460188216877" duration="599000" />
+      <workItem from="1462732275558" duration="169000" />
+      <workItem from="1463573779994" duration="93000" />
+      <workItem from="1480966627700" duration="197000" />
+      <workItem from="1480970772688" duration="127000" />
+      <workItem from="1480971715788" duration="18000" />
+      <workItem from="1507912195883" duration="276000" />
+      <workItem from="1510917670512" duration="242000" />
+      <workItem from="1510918336460" duration="1606000" />
+      <workItem from="1516198813923" duration="48000" />
+      <workItem from="1517418131723" duration="298000" />
+    </task>
+    <task id="LOCAL-00001" summary="First commit. We have a working implementation of pokemons movement system, modulo a working tile and background rendered. This will be implemented next, followed by NPC AI and the first route.">
+      <created>1438503441862</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1438503441862</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed up the houses, but the bottom is still cutting. Added a tileable background entity which provides a nice efficient bounding forest.">
+      <created>1438507026878</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1438507026878</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added collision detection, added animation for the flowers, added nice overlaps so the player can move behind houses. Pallet town is looking good externally.">
+      <created>1438530559529</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1438530559529</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Moved around code into respective packages, added some new trigger entities and depth based rendering for future grass animations and doors. Moved out core game code into a GameWorld class for portability later, architected a few things differently for future networking prospects.">
+      <created>1438588269261</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1438588269261</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added sprites for all the pallet town houses, fixed up some null pointer issues with the map triggers. Implemented the first floor of the heros house in pallet town.">
+      <created>1438590693032</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1438590693032</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added a whole lot more code, and another floor to the hero's house. Npcs now have a basic wandering AI. Entities now have tunable collision boxes, so the player cannot wander into an NPC for instance.">
+      <created>1438678102645</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1438678102645</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added a rudimentary dialogue state. Got TTF pokemon fonts working, which was a bit of a pain. Not much in the way of slick documentation on it.">
+      <created>1438804942890</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1438804942890</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Moved some entities into wrappers for convenience - added a dialogue wrapper for the ability to get dialogues from objects. Did some code maintenance in World and other places that I forget.">
+      <created>1438811528241</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1438811528241</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Polished up the text dialogue mechanics. Fits the old pokemon style nicely now.">
+      <created>1439067357032</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1439067357032</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Polished some grass entity related things, added a partial rendering wrapper which allows for entities only to render when they are close to an NPC.">
+      <created>1439069317389</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1439069317389</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added a clone method to entities so that they can be passed as reference objects to decorators.">
+      <created>1439070110150</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1439070110150</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixed up the route one sprite, fixed a bunch of errors in the entity decorators. As a result, the grass sprites now work as expected.">
+      <created>1439118689434</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1439118689434</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="95551000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2" y="0" width="1370" height="742" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42260063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.215959" sideWeight="0.4813084" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5186916" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39875388" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32507738" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit. We have a working implementation of pokemons movement system, modulo a working tile and background rendered. This will be implemented next, followed by NPC AI and the first route." />
+    <MESSAGE value="Fixed up the houses, but the bottom is still cutting. Added a tileable background entity which provides a nice efficient bounding forest." />
+    <MESSAGE value="Added collision detection, added animation for the flowers, added nice overlaps so the player can move behind houses. Pallet town is looking good externally." />
+    <MESSAGE value="Moved around code into respective packages, added some new trigger entities and depth based rendering for future grass animations and doors. Moved out core game code into a GameWorld class for portability later, architected a few things differently for future networking prospects." />
+    <MESSAGE value="Added sprites for all the pallet town houses, fixed up some null pointer issues with the map triggers. Implemented the first floor of the heros house in pallet town." />
+    <MESSAGE value="Added a whole lot more code, and another floor to the hero's house. Npcs now have a basic wandering AI. Entities now have tunable collision boxes, so the player cannot wander into an NPC for instance." />
+    <MESSAGE value="Added a rudimentary dialogue state. Got TTF pokemon fonts working, which was a bit of a pain. Not much in the way of slick documentation on it." />
+    <MESSAGE value="Moved some entities into wrappers for convenience - added a dialogue wrapper for the ability to get dialogues from objects. Did some code maintenance in World and other places that I forget." />
+    <MESSAGE value="Polished up the text dialogue mechanics. Fits the old pokemon style nicely now." />
+    <MESSAGE value="Polished some grass entity related things, added a partial rendering wrapper which allows for entities only to render when they are close to an NPC." />
+    <MESSAGE value="Added a clone method to entities so that they can be passed as reference objects to decorators." />
+    <MESSAGE value="Fixed up the route one sprite, fixed a bunch of errors in the entity decorators. As a result, the grass sprites now work as expected." />
+    <MESSAGE value="Started to add the data pipelining for battle scenes. Currently the game starts in a debug mode with two players facing off some squirtle, which I will shortly fix." />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to add the data pipelining for battle scenes. Currently the game starts in a debug mode with two players facing off some squirtle, which I will shortly fix." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/assets/player.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/pallet_house_1_2f.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/awt/Font.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35962147">
+          <caret line="797" column="16" selection-start-line="797" selection-start-column="16" selection-end-line="797" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/TileMapEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/MapInits/PalletHeroHouse2FInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/MapTriggerDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/TriggerDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/PartialRenderDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Core/CollisionMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Actions/AddEntityAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Actions/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/EntityDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/MapInits/RouteOneInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/MapInits/PalletTownInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="54" selection-start-line="92" selection-start-column="54" selection-end-line="92" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Dialogues/Dialogue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Displays/DialogueDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Displays/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Displays/PokemonDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Pokemon/Pokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Core/PlayerData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/BattleSelectState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Pokemon/PokemonStats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Actions/NpcMovementAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17447495">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Dialogues/ScrollingDialogue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Displays/StatusBarsDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="https://github.com/superfabulousmax/Hook.git">
+      <provider selected="true" editor-type-id="httpFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/PokemonPOC.Game">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>PokemonPOC.Game</OriginalElement>
+          <nodes>
+            <node x="" y="">PokemonPOC.Game</node>
+            <node x="" y="">org.newdawn.slick.InputListener</node>
+            <node x="" y="">org.newdawn.slick.KeyListener</node>
+            <node x="" y="">org.newdawn.slick.Game</node>
+            <node x="" y="">org.newdawn.slick.state.StateBasedGame</node>
+            <node x="" y="">org.newdawn.slick.ControllerListener</node>
+            <node x="" y="">org.newdawn.slick.ControlledInputReciever</node>
+            <node x="" y="">org.newdawn.slick.MouseListener</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="205.0" y="170.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/PokemonPOC.Entities.TriggerDecorator">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>PokemonPOC.Entities.TriggerDecorator</OriginalElement>
+          <nodes>
+            <node x="" y="">PokemonPOC.Entities.Entity</node>
+            <node x="" y="">PokemonPOC.Entities.TriggerDecorator</node>
+            <node x="" y="">PokemonPOC.Entities.EntityDecorator</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="70.0" y="92.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MODULES/mdl-pokemon_poc">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-pokemon_poc</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">mdl-pokemon_poc</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-208.0" y="-42.0" />
+          <SelectedNodes>
+            <node>mdl-pokemon_poc</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/PokemonPOC.Actions">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>PokemonPOC.Actions</OriginalElement>
+          <nodes>
+            <node x="" y="">PokemonPOC.Actions.DialogueAction</node>
+            <node x="" y="">PokemonPOC.Actions.AddEntityAction</node>
+            <node x="" y="">PokemonPOC.Actions.Action</node>
+            <node x="" y="">PokemonPOC.Actions.NpcMovementAction</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="228.0" y="53.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/PokemonPOC">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>PokemonPOC</OriginalElement>
+          <nodes>
+            <node x="598.8388888888888" y="78.0">PokemonPOC.Entities.StaticEntity</node>
+            <node x="-276.41111111111104" y="5.6843418860808015E-14">PokemonPOC.Entities.AddEntityTriggerDecorator</node>
+            <node x="292.83888888888885" y="156.0">PokemonPOC.Entities.DialogueDecorator</node>
+            <node x="221.58888888888885" y="234.0">PokemonPOC.Entities.MapTriggerDecorator</node>
+            <node x="145.0" y="833.0">PokemonPOC.Constants</node>
+            <node x="175.5" y="609.0">PokemonPOC.Actions.Action</node>
+            <node x="526.5" y="609.0">PokemonPOC.Dialogues.Dialogue</node>
+            <node x="133.83888888888885" y="156.0">PokemonPOC.Entities.TriggerDecorator</node>
+            <node x="462.83888888888885" y="156.0">PokemonPOC.Entities.PartialRenderDecorator</node>
+            <node x="171.0" y="536.0">PokemonPOC.Displays.DialogueDisplay</node>
+            <node x="685.0" y="609.0">PokemonPOC.GameDialogueState</node>
+            <node x="704.0" y="760.0">PokemonPOC.Core.CollisionBox</node>
+            <node x="362.33888888888885" y="-25.999999999999993">PokemonPOC.Entities.Entity</node>
+            <node x="476.0" y="536.0">PokemonPOC.Displays.StatusBarsDisplay</node>
+            <node x="535.0" y="833.0">PokemonPOC.Game</node>
+            <node x="452.83888888888885" y="78.0">PokemonPOC.Entities.AnimatedEntity</node>
+            <node x="0.0" y="536.0">PokemonPOC.Displays.BackgroundDisplay</node>
+            <node x="550.0" y="760.0">PokemonPOC.Core.CollisionMap</node>
+            <node x="500.0" y="687.0">PokemonPOC.Dialogues.ScrollingDialogue</node>
+            <node x="195.0" y="760.0">PokemonPOC.BattleSelectState</node>
+            <node x="382.0" y="760.0">PokemonPOC.Pokemon.PokemonStats</node>
+            <node x="302.83888888888885" y="78.0">PokemonPOC.Entities.EntityDecorator</node>
+            <node x="0.0" y="833.0">PokemonPOC.Core.PlayerData</node>
+            <node x="462.0" y="385.0">PokemonPOC.MapInits.PalletHeroHouse1FInit</node>
+            <node x="0.0" y="156.0">PokemonPOC.Entities.PlayerEntity</node>
+            <node x="146.0" y="687.0">PokemonPOC.Actions.AddEntityAction</node>
+            <node x="274.75" y="458.0">PokemonPOC.Displays.Display</node>
+            <node x="237.00000000000003" y="307.0">PokemonPOC.MapInits.MapInit</node>
+            <node x="648.0" y="833.0">PokemonPOC.Core.World</node>
+            <node x="296.0" y="687.0">PokemonPOC.Actions.NpcMovementAction</node>
+            <node x="148.24999999999997" y="78.0">PokemonPOC.Entities.TileMapEntity</node>
+            <node x="0.0" y="687.0">PokemonPOC.Actions.DialogueAction</node>
+            <node x="322.0" y="536.0">PokemonPOC.Displays.PokemonDisplay</node>
+            <node x="286.0" y="833.0">PokemonPOC.Pokemon.Pokemon</node>
+            <node x="0.0" y="760.0">PokemonPOC.GameWalkingState</node>
+            <node x="271.0" y="385.0">PokemonPOC.MapInits.PalletHeroHouse2FInit</node>
+            <node x="138.00000000000003" y="385.0">PokemonPOC.MapInits.RouteOneInit</node>
+            <node x="0.0" y="385.0">PokemonPOC.MapInits.PalletTownInit</node>
+            <node x="760.0" y="833.0">PokemonPOC.Main</node>
+            <node x="421.0" y="833.0">PokemonPOC.Core.Battle</node>
+            <node x="7.0" y="78.0">PokemonPOC.Entities.NpcEntity</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="PokemonPOC.Displays.PokemonDisplay" target="PokemonPOC.Core.Battle">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Displays.BackgroundDisplay" target="PokemonPOC.Displays.Display">
+              <point x="0.0" y="-14.0" />
+              <point x="75.5" y="506.0" />
+              <point x="284.25" y="506.0" />
+              <point x="-28.5" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.AddEntityTriggerDecorator" target="PokemonPOC.Entities.Entity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse1FInit" target="PokemonPOC.MapInits.PalletTownInit">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.NpcEntity" target="PokemonPOC.Core.CollisionBox">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.BattleSelectState" target="PokemonPOC.Displays.PokemonDisplay">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.PartialRenderDecorator" target="PokemonPOC.Entities.EntityDecorator">
+              <point x="0.0" y="-14.0" />
+              <point x="552.8388888888888" y="131.0" />
+              <point x="411.1722222222222" y="131.0" />
+              <point x="43.33333333333337" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.Entities.StaticEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse2FInit" target="PokemonPOC.Entities.MapTriggerDecorator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Core.World" target="PokemonPOC.Core.CollisionMap">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Displays.StatusBarsDisplay" target="PokemonPOC.Core.Battle">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Displays.StatusBarsDisplay" target="PokemonPOC.Displays.Display">
+              <point x="0.0" y="-14.0" />
+              <point x="548.5" y="506.0" />
+              <point x="341.25" y="506.0" />
+              <point x="28.5" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.RouteOneInit" target="PokemonPOC.Entities.StaticEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.Entities.TileMapEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.BattleSelectState" target="PokemonPOC.Displays.BackgroundDisplay">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse1FInit" target="PokemonPOC.Entities.StaticEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.AnimatedEntity" target="PokemonPOC.Entities.Entity">
+              <point x="0.0" y="-14.0" />
+              <point x="515.8388888888888" y="58.0" />
+              <point x="381.2388888888888" y="58.0" />
+              <point x="13.399999999999977" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Displays.PokemonDisplay" target="PokemonPOC.Displays.Display">
+              <point x="0.0" y="-14.0" />
+              <point x="389.0" y="516.0" />
+              <point x="322.25" y="516.0" />
+              <point x="9.5" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse1FInit" target="PokemonPOC.Entities.PlayerEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.BattleSelectState" target="PokemonPOC.Displays.StatusBarsDisplay">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.BattleSelectState" target="PokemonPOC.Core.PlayerData">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse2FInit" target="PokemonPOC.MapInits.PalletHeroHouse1FInit">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Actions.AddEntityAction" target="PokemonPOC.Entities.Entity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.EntityDecorator" target="PokemonPOC.Entities.Entity">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Actions.AddEntityAction" target="PokemonPOC.Actions.Action">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.DialogueDecorator" target="PokemonPOC.Actions.DialogueAction">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Dialogues.ScrollingDialogue" target="PokemonPOC.Dialogues.Dialogue">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.GameWalkingState" target="PokemonPOC.MapInits.PalletTownInit">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.MapTriggerDecorator" target="PokemonPOC.Entities.TriggerDecorator">
+              <point x="0.0" y="-14.0" />
+              <point x="304.08888888888885" y="209.0" />
+              <point x="238.08888888888885" y="209.0" />
+              <point x="34.75" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.NpcEntity" target="PokemonPOC.Actions.NpcMovementAction">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Core.CollisionMap" target="PokemonPOC.Core.CollisionBox">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.PlayerEntity" target="PokemonPOC.Actions.NpcMovementAction">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.AddEntityTriggerDecorator" target="PokemonPOC.Entities.TriggerDecorator">
+              <point x="0.0" y="-14.0" />
+              <point x="102.58888888888885" y="209.0" />
+              <point x="168.58888888888885" y="209.0" />
+              <point x="-34.75" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.Entities.NpcEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.BattleSelectState" target="PokemonPOC.Core.Battle">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.TileMapEntity" target="PokemonPOC.Entities.Entity">
+              <point x="2.8421709430404007E-14" y="-14.0" />
+              <point x="205.25" y="58.0" />
+              <point x="354.43888888888887" y="58.0" />
+              <point x="-13.399999999999977" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.DialogueDecorator" target="PokemonPOC.Dialogues.Dialogue">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.RouteOneInit" target="PokemonPOC.MapInits.MapInit">
+              <point x="0.0" y="-14.0" />
+              <point x="194.50000000000003" y="365.0" />
+              <point x="265.875" y="365.0" />
+              <point x="-9.625" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse1FInit" target="PokemonPOC.MapInits.MapInit">
+              <point x="0.0" y="-14.0" />
+              <point x="547.5" y="355.0" />
+              <point x="304.375" y="355.0" />
+              <point x="28.875" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.Entities.AnimatedEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.GameWalkingState" target="PokemonPOC.Core.World">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse2FInit" target="PokemonPOC.Entities.PlayerEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.GameDialogueState" target="PokemonPOC.Dialogues.Dialogue">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Pokemon.Pokemon" target="PokemonPOC.Pokemon.PokemonStats">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Actions.NpcMovementAction" target="PokemonPOC.Actions.Action">
+              <point x="0.0" y="-14.0" />
+              <point x="375.5" y="662.0" />
+              <point x="234.66666666666669" y="662.0" />
+              <point x="23.666666666666686" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.RouteOneInit" target="PokemonPOC.Entities.AnimatedEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.Entities.MapTriggerDecorator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.NpcEntity" target="PokemonPOC.Entities.Entity">
+              <point x="0.0" y="-14.0" />
+              <point x="52.5" y="48.0" />
+              <point x="341.03888888888883" y="48.0" />
+              <point x="-26.80000000000001" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Core.World" target="PokemonPOC.Entities.Entity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Actions.NpcMovementAction" target="PokemonPOC.Entities.NpcEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.BattleSelectState" target="PokemonPOC.Displays.DialogueDisplay">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.MapTriggerDecorator" target="PokemonPOC.MapInits.MapInit">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.NpcEntity" target="PokemonPOC.Core.World">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.RouteOneInit" target="PokemonPOC.Entities.AddEntityTriggerDecorator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.Dialogues.ScrollingDialogue">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse1FInit" target="PokemonPOC.Entities.MapTriggerDecorator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Core.Battle" target="PokemonPOC.Core.PlayerData">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Core.World" target="PokemonPOC.Actions.Action">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.GameWalkingState" target="PokemonPOC.MapInits.RouteOneInit">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.StaticEntity" target="PokemonPOC.Entities.Entity">
+              <point x="0.0" y="-14.0" />
+              <point x="650.3388888888888" y="48.0" />
+              <point x="394.63888888888886" y="48.0" />
+              <point x="26.80000000000001" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.Entities.DialogueDecorator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Main" target="PokemonPOC.Game">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Game" target="PokemonPOC.BattleSelectState">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.BattleSelectState" target="PokemonPOC.Pokemon.PokemonStats">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.GameDialogueState" target="PokemonPOC.Core.World">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.AddEntityTriggerDecorator" target="PokemonPOC.Actions.AddEntityAction">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse2FInit" target="PokemonPOC.MapInits.MapInit">
+              <point x="0.0" y="-14.0" />
+              <point x="356.5" y="365.0" />
+              <point x="285.125" y="365.0" />
+              <point x="9.625" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.DialogueDecorator" target="PokemonPOC.Entities.EntityDecorator">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Core.Battle" target="PokemonPOC.Displays.Display">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.Entities.PlayerEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Displays.DialogueDisplay" target="PokemonPOC.Displays.Display">
+              <point x="0.0" y="-14.0" />
+              <point x="236.5" y="516.0" />
+              <point x="303.25" y="516.0" />
+              <point x="-9.5" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Actions.NpcMovementAction" target="PokemonPOC.Core.CollisionBox">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.PlayerEntity" target="PokemonPOC.Entities.NpcEntity">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.BattleSelectState" target="PokemonPOC.Pokemon.Pokemon">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.RouteOneInit" target="PokemonPOC.Entities.PartialRenderDecorator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.MapInits.MapInit">
+              <point x="0.0" y="-14.0" />
+              <point x="59.0" y="355.0" />
+              <point x="246.62500000000003" y="355.0" />
+              <point x="-28.875" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletTownInit" target="PokemonPOC.MapInits.PalletHeroHouse1FInit">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Game" target="PokemonPOC.GameDialogueState">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Actions.DialogueAction" target="PokemonPOC.Dialogues.Dialogue">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Entities.TriggerDecorator" target="PokemonPOC.Entities.EntityDecorator">
+              <point x="0.0" y="-14.0" />
+              <point x="203.33888888888885" y="131.0" />
+              <point x="324.50555555555553" y="131.0" />
+              <point x="-43.333333333333314" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Actions.DialogueAction" target="PokemonPOC.Actions.Action">
+              <point x="0.0" y="-14.0" />
+              <point x="63.0" y="662.0" />
+              <point x="187.33333333333334" y="662.0" />
+              <point x="-23.666666666666657" y="14.0" />
+            </edge>
+            <edge source="PokemonPOC.Core.Battle" target="PokemonPOC.Pokemon.Pokemon">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse1FInit" target="PokemonPOC.MapInits.PalletHeroHouse2FInit">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.MapInits.PalletHeroHouse2FInit" target="PokemonPOC.Entities.StaticEntity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Game" target="PokemonPOC.GameWalkingState">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PokemonPOC.Core.PlayerData" target="PokemonPOC.Pokemon.Pokemon">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="-369.0" y="421.0" />
+          <SelectedNodes>
+            <node>PokemonPOC.Entities.AddEntityTriggerDecorator</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/AddEntityTriggerDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Actions/DialogueAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/DialogueDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1453958">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Core/CollisionBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Displays/BackgroundDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Core/Battle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/MapInits/PalletHeroHouse1FInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/StaticEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/AnimatedEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/PlayerEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Entities/NpcEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="50" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/GameDialogueState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/MapInits/MapInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding>
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/GameWalkingState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="89" selection-start-line="34" selection-start-column="89" selection-end-line="34" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokemonPOC/Core/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2601156">
+          <caret line="75" column="15" selection-start-line="75" selection-start-column="15" selection-end-line="83" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Detection</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>pokemon_poc</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Slick2D</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

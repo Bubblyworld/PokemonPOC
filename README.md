@@ -1,7 +1,5 @@
-# Pokemon Proof of Concept
+I felt like writing up a clone of pokemon red (or parts of it, at least) so I could mess in one of my favourite games of all time. Since I'm probably going to get nailed by copyright lawyers at some point, here's an image of what this looks like in practice:
 
-## Overview
-I felt like writing up a clone of pokemon red (or parts of it, at least) so I could mess around with it. Always wanted to do this at some point - ideally I'd like to add proper networking so that multiple people can walk around in the same map.
+![Ingame Image](pokemon.jpg)
 
-## Compilation
-To compile, you need to link it with the Slick2D library.
+To compile and run this, you'll have to link it with the Slick2D graphics library.

@@ -1,6 +1,7 @@
 package PokemonPOC.Displays;
 
 import PokemonPOC.Core.Battle;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
@@ -35,7 +36,15 @@ public class StatusBarsDisplay extends Display {
 
     @Override
     public void render(Graphics graphics) {
+        //Draw the status overlays.
         playerOneStats.draw(252, 148);
         playerTwoStats.draw(26, 31);
+
+        //Draw the pokemon names.
+        graphics.setColor(Color.black);
+        graphics.setFont(battle.font);
+
+        graphics.drawString(battle.pokemonTwo.name, 40, 42);
+        graphics.drawString(battle.pokemonOne.name, 285, 158);
     }
 }

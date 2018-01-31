@@ -13,7 +13,7 @@ public class Game extends StateBasedGame {
         addState(new GameDialogueState());
         addState(new BattleSelectState());
 
-        enterState(Constants.BATTLE_SELECT_STATE_ID);
-//        enterState(Constants.GAME_WALKING_STATE_ID);
+//        enterState(Constants.BATTLE_SELECT_STATE_ID);
+        enterState(Constants.GAME_WALKING_STATE_ID);
     }
 }
